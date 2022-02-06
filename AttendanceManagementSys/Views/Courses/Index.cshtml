@@ -1,0 +1,26 @@
+﻿
+@model System.Data.DataTable
+
+<h1>Hello </h1>
+
+<table class="table table-dark table-responsive">
+    <thead>
+        <tr>
+            <th>Course Id</th>
+            <th>Course Namme</th>
+            <th>Course Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        @*@Model.Columns.Count*@
+
+        @foreach(System.Data.DataRow item in Model.Rows)
+        { 
+        <tr>
+            <td>@item[0]</td>
+            <td>@item[1]</td>
+            <td>@item[2]</td>
+        </tr>
+        }
+    </tbody>
+</table>
